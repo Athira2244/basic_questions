@@ -1,0 +1,13 @@
+span {
+  font-size: 42px;
+  cursor: pointer;
+}
+span:hover {
+  color: rgb(255, 234, 0);
+}
+.add-color {
+  color: rgb(255, 234, 0);
+}
+.remove-color {
+  color: rgb(76, 69, 0);
+}

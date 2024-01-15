@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Questions</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="top-0 start-0 position-sticky z-3">
+      <nav class="navbar navbar-expand-md bg-light shadow text-center">
+        <div class="container">
+          <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navmenu"
+          >
+            <span class="navbar-toggler-icon fs-5"></span>
+          </button>
+          <div class="d-flex align-items-center">
+            <a href="#" class="navbar-brand">
+              <h3 class="text-success">Basic Questions</h3>
+            </a>
+          </div>
+
+          <div
+            class="collapse navbar-collapse justify-content-around"
+            id="navmenu"
+          >
+            <ul class="navbar-nav nav-underline">
+              <li class="nav-item mx-2">
+                <a class="nav-link text-primary" href="#home">Home</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-primary" href="#if">If</a>
+              </li>
+
+              <li class="nav-item mx-2">
+                <a class="nav-link text-primary" href="#loop">Loops</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-primary" href="#array">Arrays</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link text-primary" href="#others">Others</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="container py-2 my-2 rounded" id="home">
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success">1. Variable Declaration</h2>
+        <p class="m-4" id="variableD"></p>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success">2. Print a statement</h2>
+        <p class="m-4" id="printing"></p>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success">3. Sum And Difference Of Two Numbers</h2>
+        <p class="m-4" id="calculate"></p>
+
+        <input
+          type="number"
+          class="form-control m-2"
+          placeholder="Enter First Number"
+          id="num1"
+        />
+        <input
+          type="number"
+          class="form-control m-2"
+          placeholder="Enter Second Number"
+          id="num2"
+        />
+        <select name="operators" class="form-select m-2" id="op">
+          <option selected disabled>Choose Operator</option>
+          <option value="+">+</option>
+          <option value="-">-</option>
+        </select>
+        <button
+          type="button"
+          class="btn btn-outline-primary m-2"
+          onclick="Calculate()"
+        >
+          Calculate
+        </button>
+      </div>
+
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success">4. Cube Of A Number</h2>
+        <p class="m-4" id="cubeofnum"></p>
+        <input
+          type="number"
+          class="form-control m-2 w-100 mx-auto"
+          placeholder="Enter A Number"
+          id="num3"
+        />
+        <button
+          type="button"
+          class="btn btn-outline-primary m-2"
+          onclick="Cube()"
+        >
+          Cube
+        </button>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success">5. SWAPING</h2>
+        <p class="m-4" id="swaping"></p>
+
+        <input
+          type="number"
+          class="form-control my-2"
+          placeholder="Enter First Number"
+          id="num4"
+        />
+        <input
+          type="number"
+          class="form-control my-2"
+          placeholder="Enter Second Number"
+          id="num5"
+        />
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="Swap()"
+        >
+          Swap
+        </button>
+      </div>
+    </section>
+
+    <!--CONDITIONAL STATEMENTS -->
+    <section class="container py-2 my-2 rounded" id="if">
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success">6. Find Largest Of Two Number</h2>
+        <p class="m-4" id="Largest"></p>
+        <input
+          type="number"
+          class="form-control w-100 mx-auto m-2"
+          placeholder="Enter First Number"
+          id="num8"
+        />
+        <input
+          type="number"
+          class="form-control w-100 mx-auto m-2"
+          placeholder="Enter Second Number"
+          id="num9"
+        />
+
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="largestOfTwo()"
+        >
+          Largest Of 2 Numbers
+        </button>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success">7. Find Largest Of Three Numbers</h2>
+        <p class="m-4" id="thirdLarge"></p>
+        <input
+          type="number"
+          class="form-control w-100 mx-auto m-2"
+          placeholder="Enter First Number"
+          id="num10"
+        />
+        <input
+          type="number"
+          class="form-control w-100 mx-auto m-2"
+          placeholder="Enter Second Number"
+          id="num11"
+        />
+        <input
+          type="number"
+          class="form-control w-100 mx-auto m-2"
+          placeholder="Enter Third Number"
+          id="num12"
+        />
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="largestOfThree()"
+        >
+          Largest Of 3 Numbers
+        </button>
+      </div>
+
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success">8. Odd Or Even Number</h2>
+        <p class="m-4" id="oddoreven"></p>
+        <input
+          type="number"
+          class="form-control w-100 mx-auto"
+          id="num14"
+          placeholder="Enter A Number"
+        />
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="Odd_Even()"
+        >
+          Odd Or Even
+        </button>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success">9. Divide By Two And Five</h2>
+        <p class="m-4" id="divisible"></p>
+        <input
+          type="number"
+          class="form-control w-100 mx-auto"
+          id="num15"
+          placeholder="Enter A Number"
+        />
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="Divisible()"
+        >
+          Divisible
+        </button>
+      </div>
+
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success">10. Days Of A Week</h2>
+        <p class="m-4" id="days"></p>
+
+        <select name="day" class="form-select my-2" id="num16">
+          <option selected disabled>Choose A Number</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+        </select>
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="daysOfWeek()"
+        >
+          Print Days
+        </button>
+      </div>
+    </section>
+    <!--CONDITIONAL STATEMENTS  LOOPS-->
+    <section class="container py-2 my-2 rounded" id="loop">
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success">11. Armstrong Number</h2>
+        <p class="m-4" id="armstrong"></p>
+        <input
+          type="number"
+          class="form-control w-100 mx-auto"
+          id="num13"
+          placeholder="Enter A Number"
+        />
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="findArmstrong()"
+        >
+          Find Armstrong
+        </button>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success">12. Reverse String</h2>
+        <p class="m-4" id="reverse"></p>
+        <input
+          type="text"
+          class="form-control w-100 mx-auto"
+          id="str1"
+          placeholder="Enter A String"
+        />
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="reverseString()"
+        >
+          Reverse String
+        </button>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success">13. Factorial Of Given Number</h2>
+        <p class="m-4" id="fact"></p>
+        <input
+          type="number"
+          class="form-control w-100 mx-auto m-2"
+          placeholder="Enter A Number"
+          id="num7"
+        />
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="Factorial()"
+        >
+          Find Factorial
+        </button>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success">14. Creating Review Stars</h2>
+        <p class="m-4" id="review"></p>
+        <p id="counts" class="h3 text-primary"></p>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success">15. Multiplication Table</h2>
+        <p class="m-4" id="multi"></p>
+        <input
+          type="number"
+          class="form-control w-100 mx-auto"
+          placeholder="Enter A Number"
+          id="num17"
+        />
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="Multiplication()"
+        >
+          Multiplication Table
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="Clear()"
+        >
+          Clear
+        </button>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success">16. Sum Of Numbers</h2>
+        <p class="m-4" id="sum"></p>
+        <input
+          type="number"
+          class="form-control w-100 mx-auto"
+          id="num18"
+          placeholder="Enter A Number"
+        />
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="sumOfNumbers()"
+        >
+          Sum
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="ClearSum()"
+        >
+          Clear
+        </button>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success">17. Fibinocii Series</h2>
+        <p class="m-4" id="fseries"></p>
+        <input
+          type="number"
+          class="form-control w-100 mx-auto"
+          id="num19"
+          placeholder="Enter A Number"
+        />
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="Series()"
+        >
+          Fibinocii Series
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="ClearSeries()"
+        >
+          Clear
+        </button>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success">18. String Palindrome</h2>
+        <p class="m-4" id="strPalindrome"></p>
+        <input
+          type="text"
+          class="form-control w-100 mx-auto"
+          id="str2"
+          placeholder="Enter A String"
+        />
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="stringPalindrome()"
+        >
+          Palindrome
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="ClearPalindrome()"
+        >
+          Clear
+        </button>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success">19. Number Palindrome</h2>
+        <p class="m-4" id="numPalindrome"></p>
+        <input
+          type="number"
+          class="form-control w-100 mx-auto"
+          id="num20"
+          placeholder="Enter A Number"
+        />
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="numberPalindrome()"
+        >
+          Palindrome
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="ClearNumPalindrome()"
+        >
+          Clear
+        </button>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success">20. Prime Number</h2>
+        <p class="m-4" id="prime"></p>
+        <input
+          type="number"
+          class="form-control w-100 mx-auto"
+          id="num21"
+          placeholder="Enter A Number"
+        />
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="checkPrime()"
+        >
+          Prime
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="ClearPrime()"
+        >
+          Clear
+        </button>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success">21. Prime Number Up To Limit</h2>
+        <p class="m-4" id="primelimit"></p>
+        <input
+          type="number"
+          class="form-control w-100 mx-auto"
+          id="num22"
+          placeholder="Enter A Number"
+        />
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="checkPrimeLimit()"
+        >
+          Prime Up To Limit
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="ClearPrimeLimit()"
+        >
+          Clear
+        </button>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success">22. Reverse Of Number</h2>
+        <p class="m-4" id="reversenum"></p>
+        <input
+          type="number"
+          class="form-control w-100 mx-auto"
+          id="num23"
+          placeholder="Enter A Number"
+        />
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="reverseNumber()"
+        >
+          Reverse Of Number
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="ClearReverse()"
+        >
+          Clear
+        </button>
+      </div>
+      <!--STAR PRINTING-->
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success">23. Full Star Pyramid</h2>
+        <p class="m-4" id="fullstar"></p>
+        <input
+          type="text"
+          class="form-control w-100 mx-auto"
+          placeholder="Enter A Number"
+          id="num38"
+        />
+        <button class="btn btn-outline-primary my-2" onclick="PrintFull();">
+          Print Star
+        </button>
+        <button
+          class="btn btn-outline-primary my-2"
+          onclick="ClearPrintFull();"
+        >
+          Clear
+        </button>
+      </div>
+      <div class="container shadow p-5 my-3 rounded">
+        <h2 class="m-4 text-success text-center">24. Right Star Printing</h2>
+        <p class="m-4" id="rightstar"></p>
+        <input
+          type="text"
+          class="form-control w-100"
+          placeholder="Enter A Number"
+          id="num39"
+        />
+        <div class="d-flex justify-content-center">
+          <button
+            class="btn btn-outline-primary mx-1 my-2"
+            onclick="PrintRight();"
+          >
+            Print Star
+          </button>
+          <button
+            class="btn btn-outline-primary mx-1 my-2"
+            onclick="ClearPrintRight();"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+      <div class="container shadow p-5 my-3 rounded">
+        <h2 class="m-4 text-success text-center">25. Left Star Printing</h2>
+        <p class="m-4" id="leftstar"></p>
+        <input
+          type="text"
+          class="form-control w-100"
+          placeholder="Enter A Number"
+          id="num40"
+        />
+        <div class="d-flex justify-content-center">
+          <button
+            class="btn btn-outline-primary mx-1 my-2"
+            onclick="PrintLeft();"
+          >
+            Print Star
+          </button>
+          <button
+            class="btn btn-outline-primary mx-1 my-2"
+            onclick="ClearPrintLeft();"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+    </section>
+    <!--ARRAYS-->
+    <section class="container py-2 my-2 rounded" id="array">
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success">
+          26. Creating Array And Merging Them With No Repeating Values
+        </h2>
+        <p class="m-4" id="merge"></p>
+        <p id="unique"></p>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success">27. Array With Out Loop</h2>
+        <p class="m-4" id="acceptArray"></p>
+        <input
+          type="text"
+          class="form-control w-100 mx-auto"
+          id="num24"
+          placeholder="Enter 5 Numbers With Space"
+        />
+
+        <div>
+          <button
+            type="button"
+            class="btn btn-outline-primary my-2"
+            onclick="AcceptArray()"
+          >
+            Accept Array
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-primary my-2"
+            onclick="ClearAcceptArray()"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success mx-auto">28. Array With Loop</h2>
+        <p class="m-4" id="acceptArrayLoop"></p>
+        <input
+          type="text"
+          class="form-control w-100 mx-auto"
+          id="num25"
+          placeholder="Enter  Numbers With Space"
+        />
+
+        <div>
+          <button
+            type="button"
+            class="btn btn-outline-primary my-2"
+            onclick="AcceptArrayLoop()"
+          >
+            Accept Array
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-primary my-2"
+            onclick="ClearAcceptArrayLoop()"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success mx-auto">29. Reverse Array</h2>
+        <p class="m-4" id="reverseArray"></p>
+        <input
+          type="text"
+          class="form-control w-100 mx-auto"
+          id="num26"
+          placeholder="Enter  Numbers With Space"
+        />
+
+        <div>
+          <button
+            type="button"
+            class="btn btn-outline-primary my-2"
+            onclick="ReverseArray()"
+          >
+            Reverse
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-primary my-2"
+            onclick="ClearReverseArray()"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success mx-auto">30. Sum Of Two Arrays</h2>
+        <p class="m-4" id="sumarray"></p>
+        <input
+          type="text"
+          class="form-control w-100 mx-auto my-2"
+          id="num27"
+          placeholder="Enter  Numbers With Space"
+        />
+        <input
+          type="text"
+          class="form-control w-100 mx-auto my-2"
+          id="num28"
+          placeholder="Enter  Numbers With Space"
+        />
+
+        <div>
+          <button
+            type="button"
+            class="btn btn-outline-primary my-2"
+            onclick="sumArray()"
+          >
+            Sum
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-primary my-2"
+            onclick="ClearSumArray()"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success mx-auto">31. Sum Of Elements Of Array</h2>
+        <p class="m-4" id="sumelements"></p>
+        <input
+          type="text"
+          class="form-control w-100 mx-auto my-2"
+          id="num29"
+          placeholder="Enter Numbers With Spaces"
+        />
+
+        <div>
+          <button
+            type="button"
+            class="btn btn-outline-primary my-2"
+            onclick="sumElements()"
+          >
+            Sum
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-primary my-2"
+            onclick="ClearSumElements()"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success mx-auto">32. Search Element Of an Array</h2>
+        <p class="m-4" id="searcharray"></p>
+        <input
+          type="text"
+          class="form-control w-100 mx-auto my-2"
+          id="num30"
+          placeholder="Enter Numbers With Spaces"
+        />
+        <input
+          type="text"
+          class="form-control w-100 mx-auto my-2"
+          id="num31"
+          placeholder="Enter The Element To Be Searched"
+        />
+
+        <div>
+          <button
+            type="button"
+            class="btn btn-outline-primary my-2"
+            onclick="searchArray()"
+          >
+            Search
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-primary my-2"
+            onclick="ClearSearch()"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success mx-auto">33. Equal Arrays</h2>
+        <p class="m-4" id="equalarray"></p>
+        <input
+          type="text"
+          class="form-control w-100 mx-auto my-2"
+          id="num32"
+          placeholder="Enter Numbers With Spaces"
+        />
+        <input
+          type="text"
+          class="form-control w-100 mx-auto my-2"
+          id="num33"
+          placeholder="Enter Numbers With Spaces"
+        />
+
+        <div>
+          <button
+            type="button"
+            class="btn btn-outline-primary my-2"
+            onclick="EqualArray()"
+          >
+            Equal
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-primary my-2"
+            onclick="ClearEqualArray()"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success mx-auto">34. Largest Element Of Array</h2>
+        <p class="m-4" id="largearray"></p>
+        <input
+          type="text"
+          class="form-control w-100 mx-auto my-2"
+          id="num34"
+          placeholder="Enter Numbers With Spaces"
+        />
+
+        <div>
+          <button
+            type="button"
+            class="btn btn-outline-primary my-2"
+            onclick="LargeArray()"
+          >
+            Large
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-primary my-2"
+            onclick="ClearLargeArray()"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success mx-auto">35. Sort Array</h2>
+        <p class="m-4" id="sortarray"></p>
+        <input
+          type="text"
+          class="form-control w-100 mx-auto my-2"
+          id="num35"
+          placeholder="Enter Numbers With Spaces"
+        />
+
+        <div>
+          <button
+            type="button"
+            class="btn btn-outline-primary my-2"
+            onclick="SortArray()"
+          >
+            Sort
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-primary my-2"
+            onclick="ClearSortArray()"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success mx-auto">36. Remove Element Of An Array</h2>
+        <p class="m-4" id="removearray"></p>
+        <input
+          type="text"
+          class="form-control w-100 mx-auto my-2"
+          id="num36"
+          placeholder="Enter Numbers"
+        />
+        <input
+          type="text"
+          class="form-control w-100 mx-auto my-2"
+          id="num37"
+          placeholder="Enter Number To be Removed"
+        />
+
+        <div>
+          <button
+            type="button"
+            class="btn btn-outline-primary my-2"
+            onclick="RemoveArray()"
+          >
+            Remove
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-primary my-2"
+            onclick="ClearRemoveArray()"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success mx-auto">37. 2 X 2 Matrix</h2>
+        <p class="m-4" id="matrix"></p>
+        <input
+          type="text"
+          class="form-control mx-auto my-2 w-100"
+          placeholder="Enter 4 numbers With Spaces "
+          id="num44"
+        />
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="displayMatrix()"
+        >
+          Display
+        </button>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success mx-auto">38. Sum Of 2 X 2 Matrix</h2>
+        <p class="m-4" id="summatrix"></p>
+        <input
+          type="text"
+          class="form-control mx-auto my-2 w-100"
+          placeholder="Enter 4 numbers With Spaces "
+          id="num46"
+        />
+        <input
+          type="text"
+          class="form-control mx-auto my-2 w-100"
+          placeholder="Enter 4 numbers With Spaces "
+          id="num47"
+        />
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="SumMatrix()"
+        >
+          Sum
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="clearSumMatrix()"
+        >
+          Clear
+        </button>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success mx-auto">
+          39. Multiplication Of 3 X 2 Matrix
+        </h2>
+        <p class="m-4" id="productMatrix"></p>
+        <input
+          type="text"
+          class="form-control mx-auto my-2 w-100"
+          placeholder="Enter 6 numbers With Spaces"
+          id="num48"
+        />
+        <input
+          type="text"
+          class="form-control mx-auto my-2 w-100"
+          placeholder="Enter 6 numbers With Spaces "
+          id="num49"
+        />
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="ProductMatrix()"
+        >
+          Product
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="clearProductMatrix()"
+        >
+          Clear
+        </button>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success mx-auto">40. Equal Matrices</h2>
+        <p class="m-4" id="equalMatrix"></p>
+        <input
+          type="text"
+          class="form-control mx-auto my-2 w-100"
+          placeholder="Enter 4 numbers With Spaces"
+          id="num50"
+        />
+        <input
+          type="text"
+          class="form-control mx-auto my-2 w-100"
+          placeholder="Enter 4 numbers With Spaces "
+          id="num51"
+        />
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="EqualMatrix()"
+        >
+          Product
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="clearEqualMatrix()"
+        >
+          Clear
+        </button>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success mx-auto">41. Diagonal Matrix</h2>
+        <p class="m-4" id="diagonal"></p>
+        <input
+          type="text"
+          class="form-control mx-auto my-2 w-100"
+          placeholder="Enter 4  numbers With Spaces"
+          id="num54"
+        />
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="DiagonalMatrix()"
+        >
+          Display
+        </button>
+      </div>
+    </section>
+    <section class="container py-2 my-2 rounded" id="others">
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success">42. Class Creation</h2>
+        <p class="m-4" id="class1"></p>
+      </div>
+      <div class="container shadow p-2 my-2 rounded text-center">
+        <h2 class="text-success mx-auto py-2">43. Invoice</h2>
+        <div class="text-dark d-none rounded bg-light" id="invoice"></div>
+
+        <input
+          type="text"
+          class="form-control w-100 mx-auto my-2"
+          id="str4"
+          placeholder="Enter The Product With Spaces"
+        />
+        <input
+          type="text"
+          class="form-control w-100 mx-auto my-2"
+          id="num43"
+          placeholder="Enter The Price With Spaces"
+        />
+        <input
+          type="text"
+          class="form-control w-100 mx-auto my-2"
+          id="str5"
+          placeholder="Enter yes or no (Overnight Shipping)"
+        />
+
+        <div>
+          <button
+            type="button"
+            class="btn btn-outline-primary my-2"
+            onclick="generateInvoice()"
+          >
+            Generate
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-primary my-2"
+            onclick="clearInvoice()"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success">44. Divide By Five And Six</h2>
+        <p class="m-4" id="division"></p>
+        <input
+          type="number"
+          class="form-control w-100 mx-auto"
+          id="num41"
+          placeholder="Enter A Number"
+        />
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="Divisible2()"
+        >
+          Divisible
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="clearDivision()"
+        >
+          Clear
+        </button>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success mx-auto">45. Student Details</h2>
+        <p class="m-4" id="studentDetails"></p>
+
+        <input
+          type="text"
+          class="form-control w-100 mx-auto my-2"
+          id="str3"
+          placeholder="Enter The Names With Spaces"
+        />
+        <input
+          type="text"
+          class="form-control w-100 mx-auto my-2"
+          id="num42"
+          placeholder="Enter The Marks With Spaces"
+        />
+
+        <div>
+          <button
+            type="button"
+            class="btn btn-outline-primary my-2"
+            onclick="View_Results()"
+          >
+            View
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-primary my-2"
+            onclick="ClearResults()"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success mx-auto">46. ASCII Code</h2>
+        <p class="m-4" id="ascii"></p>
+        <input
+          type="text"
+          class="form-control mx-auto my-2 w-100"
+          placeholder="Enter Single Character"
+          id="str6"
+        />
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="findASCII()"
+        >
+          Find
+        </button>
+      </div>
+      <div class="container shadow p-5 my-3 rounded text-center">
+        <h2 class="m-4 text-success mx-auto">47. Wind Chill Index</h2>
+        <p class="m-4" id="windchill"></p>
+        <input
+          type="text"
+          class="form-control mx-auto my-2 w-100"
+          placeholder="Enter Speed In Miles/Hour"
+          id="num52"
+        />
+        <input
+          type="text"
+          class="form-control mx-auto my-2 w-100"
+          placeholder="Enter Temperature In Farenheit"
+          id="num53"
+        />
+        <button
+          type="button"
+          class="btn btn-outline-primary my-2"
+          onclick="WindChill()"
+        >
+          Calculate
+        </button>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
