@@ -565,16 +565,20 @@ function RemoveArray() {
   let Num36 = document.getElementById("num36").value;
   let Num37 = document.getElementById("num37").value;
   let array12 = Num36.split(" ");
+  let removed = null;
 
   array12.forEach((item, index) => {
     if (item == Num37) {
-      array12.splice(index, 1);
+      removed = array12.splice(index, 1);
     }
   });
-
-  display16.innerHTML = `Removed Element : ${Num37} <br>Resultant Array : ${array12.join(
-    " "
-  )}`;
+  if (removed !== null) {
+    display16.innerHTML = `Removed Element : ${removed} <br>Resultant Array : ${array12.join(
+      " "
+    )}`;
+  } else {
+    display16.innerHTML = `<p class="text-danger">There is no such element</p>`;
+  }
 }
 
 function ClearRemoveArray() {
